@@ -1,8 +1,10 @@
-package org.ortega.Examples;
+package org.herencia.Examples;
 
-import org.ortega.Herencia.*;
+import org.herencia.Herencia.Person;
+import org.herencia.Herencia.Student;
+import org.herencia.Herencia.Teacher;
 
-public class Main {
+public class MainToString {
 
   public static void main(String[] args) {
     Person person_01 = new Person("Ivan Marino", "Ortega Garzon", 27, "email@gmail.com.co");
@@ -26,17 +28,7 @@ public class Main {
   }
 
   public static void PrintPerson(Person p){
-    System.out.println(
-            "Names: " + p.getNames() + '\n' +
-            "LastNames: " + p.getLastNames() + '\n' +
-            "Age: " + p.getAge() + '\n' +
-            "Email: " + p.getEmail());
-
-    System.out.println(" <------ greeting " + p.getNames() + " -----> ");
-
-    System.out.println( p.greeting() );
-
-    System.out.println("<---------------- new Person ---------------->");
+    System.out.println(p);
   }
 
 }

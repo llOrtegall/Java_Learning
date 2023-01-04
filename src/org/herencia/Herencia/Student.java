@@ -1,4 +1,4 @@
-package org.ortega.Herencia;
+package org.herencia.Herencia;
 
 public class Student extends Person {
   private final String school;

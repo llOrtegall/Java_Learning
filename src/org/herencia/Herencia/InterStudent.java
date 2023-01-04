@@ -1,4 +1,4 @@
-package org.ortega.Herencia;
+package org.herencia.Herencia;
 
 public class InterStudent extends Student {
   private final String country;

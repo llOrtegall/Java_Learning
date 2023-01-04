@@ -1,4 +1,4 @@
-package org.ortega.Herencia;
+package org.herencia.Herencia;
 
 public class Person {
   private final String names;
