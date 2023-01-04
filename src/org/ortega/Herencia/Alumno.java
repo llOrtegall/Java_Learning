@@ -1,14 +1,10 @@
-package Herencia;
+package org.ortega.Herencia;
 
 public class Alumno extends Persona {
   private String institucion;
   private double notaMatematicas;
   private double notaCiencias;
   private double notaHistoria;
-
-  public Alumno(){
-    System.out.println("Inicializando contructor de Alumno");
-  }
 
   public Alumno(String nombres, String apellidos ){
     super(nombres, apellidos);
@@ -60,5 +56,10 @@ public class Alumno extends Persona {
 
   public void setNotaHistoria(double notaHistoria) {
     this.notaHistoria = notaHistoria;
+  }
+
+  @Override
+  public String saludar() {
+    return "Hola, soy un alumno y me llamo " + getNombres() + " " + getApellidos() + ". Tengo " + getEdad() + " años y estudio en " + getInstitucion() + ".";
   }
 }

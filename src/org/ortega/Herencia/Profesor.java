@@ -1,11 +1,7 @@
-package Herencia;
+package org.ortega.Herencia;
 
 public class Profesor extends Persona {
-  private String asigtura;
-
-  public Profesor(){
-    System.out.println("Inicializando contructor de Profesor");
-  }
+  private String asignatura;
 
   public Profesor(String nombres, String apellidos ){
     super(nombres, apellidos);
@@ -18,14 +14,20 @@ public class Profesor extends Persona {
 
   public Profesor(String nombres, String apellidos, int edad, String asigtura){
     this(nombres, apellidos, edad); /* TODO: hace referencia al segundo contructor */
-    this.asigtura = asigtura;
+    this.asignatura = asigtura;
   }
 
   public String getAsigtura() {
-    return asigtura;
+    return asignatura;
   }
 
   public void setAsigtura(String asigtura) {
-    this.asigtura = asigtura;
+    this.asignatura = asigtura;
+  }
+
+  @Override
+  public String saludar() {
+    return "Hola, soy un profesor y mi nombre es " + getNombres() + " " + getApellidos() + ". Tengo "
+            + getEdad() + " años y enseño " + asignatura + ".";
   }
 }
