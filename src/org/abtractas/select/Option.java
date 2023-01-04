@@ -13,25 +13,14 @@ public class Option {
     this.name = name;
   }
 
-  public String getValue() {
-    return value;
-  }
+  public String getValue() { return value; }
 
-  public void setValue(String value) {
-    this.value = value;
-  }
+  public void setValue(String value) { this.value = value; }
 
-  public String getText() {
-    return name;
-  }
+  public String getName() { return name; }
 
-  public void setText(String name) {
-    this.name = name;
-  }
-
-  public boolean isSelected() {
-    return selected;
-  }
+  public void setText(String name) { this.name = name; }
+  public boolean isSelected() { return selected; }
 
   public void setSelected(boolean selected) {
     this.selected = selected;

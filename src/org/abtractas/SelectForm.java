@@ -19,8 +19,26 @@ public class SelectForm extends ElementoForm{
     this.options = options;
   }
 
+  public SelectForm addOption(Option option) {
+    this.options.add(option);
+    return this;
+  }
+
   @Override
   public String drawHtml() {
-    return "";
+    StringBuilder sb = new StringBuilder("<select ");
+    sb.append("name='").append(this.name).append("'>");
+
+    for(Option option : this.options){
+      sb.append("\n<option value='").append(option.getValue()).append("'");
+      if(option.isSelected()){
+        sb.append(" selected");
+      }
+      sb.append(">").append(option.getName())
+              .append("</option>");
+    }
+
+    sb.append("</select>");
+    return sb.toString();
   }
 }
