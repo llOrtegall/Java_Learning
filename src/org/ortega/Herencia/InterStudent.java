@@ -1,11 +1,11 @@
 package org.ortega.Herencia;
 
-public class InterStudent extends Student{
+public class InterStudent extends Student {
   private final String country;
-  private final String noteEnglish;
+  private final double noteEnglish;
 
   public InterStudent(String names, String lastNames, int age, String email, String School, int Grade, double noteMath,
-    double noteScience, double noteHistory, String Country, String NoteEnglish){
+                      double noteScience, double noteHistory, String Country, double NoteEnglish) {
     super(names, lastNames, age, email, School, Grade, noteMath, noteScience, noteHistory);
     this.country = Country;
     this.noteEnglish = NoteEnglish;
@@ -15,7 +15,7 @@ public class InterStudent extends Student{
     return country;
   }
 
-  public String getNoteEnglish() {
+  public double getNoteEnglish() {
     return noteEnglish;
   }
 
@@ -24,5 +24,17 @@ public class InterStudent extends Student{
     return "Hi, I'm " + getNames() + " " + getLastNames() + ", I am " + getAge() + " years old. I am a student at "
             + getSchool() + " in grade " + getGrade() + ". My grades are: Math: " + getNoteMath() + ", Science: " + getNoteScience()
             + ", History: " + getNoteHistory() + ". I am from " + country + " and my English grade is " + noteEnglish + ".";
+  }
+
+  @Override
+  public double calAverage() {
+    return ((super.calAverage() * 3) + noteEnglish) / 4;
+  }
+
+  @Override
+  public String toString() {
+    return super.toString() + '\n' +
+            "country=' " + country + '\'' +
+            ", noteEnglish= " + noteEnglish;
   }
 }

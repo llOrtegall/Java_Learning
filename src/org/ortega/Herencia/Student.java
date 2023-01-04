@@ -33,4 +33,19 @@ public class Student extends Person {
             + school + " in grade " + grade + ". My grades are: Math: " + noteMath + ", Science: " + noteScience
             + ", History: " + noteHistory + ".";
   }
+
+  public double calAverage(){
+    return (noteMath + noteScience + noteHistory) / 3;
+  }
+
+  @Override
+  public String toString() {
+    return super.toString() +
+            "school=' " + school + '\'' +
+            ", grade= " + grade +
+            ", noteMath= " + noteMath +
+            ", noteScience= " + noteScience +
+            ", noteHistory= " + noteHistory +
+            ", average: " + calAverage() + '\n';
+  }
 }

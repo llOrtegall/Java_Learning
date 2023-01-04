@@ -24,4 +24,12 @@ public class Person {
   public String greeting(){
     return  "Hi, I'm " + names + " " + lastNames + ", I am " + age + " years old.";
   }
+
+  @Override
+  public String toString() {
+    return  "names=' " + names + '\'' +
+            ", lastNames=' " + lastNames + '\'' +
+            ", age= " + age +
+            ", email=' " + email + '\'';
+  }
 }
