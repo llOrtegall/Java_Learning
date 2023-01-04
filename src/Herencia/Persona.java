@@ -7,7 +7,17 @@ public class Persona {
   protected String correo;
 
   public Persona(){
-    System.out.println("Inicializando contructor de Persona");
+
+  }
+
+  public Persona(String nombres, String apellidos){
+    this.nombres = nombres;
+    this.apellidos = apellidos;
+  }
+
+  public Persona (String nombres, String apellidos, int edad ){
+    this  (nombres, apellidos);
+    this.edad = edad;
   }
 
   public String getNombres() {
