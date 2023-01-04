@@ -3,6 +3,7 @@ package Herencia;
 public class Alumno extends Persona {
   private String institucion;
   private double notaMatematicas;
+  private double notaCiencias;
   private double notaHistoria;
 
   public Alumno(){
@@ -22,6 +23,13 @@ public class Alumno extends Persona {
     this.institucion = institucion;
   }
 
+  public Alumno(String nombres, String apellidos, int edad, String institucion, double notaMatematicas, double notaCiencias, double notaHistoria){
+    this(nombres, apellidos, edad, institucion);
+    this.notaMatematicas = notaMatematicas;
+    this.notaCiencias = notaCiencias;
+    this.notaHistoria = notaHistoria;
+  }
+
   public String getInstitucion() {
     return institucion;
   }
@@ -36,6 +44,14 @@ public class Alumno extends Persona {
 
   public void setNotaMatematicas(double notaMatematicas) {
     this.notaMatematicas = notaMatematicas;
+  }
+
+  public double getNotaCiencias() {
+    return notaCiencias;
+  }
+
+  public void setNotaCiencias(double notaCiencias) {
+    this.notaCiencias = notaCiencias;
   }
 
   public double getNotaHistoria() {
